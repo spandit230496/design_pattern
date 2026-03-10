@@ -211,3 +211,163 @@ The **Adapter Design Pattern** converts the interface of a class into another in
 # Key Idea
 
 The Adapter Pattern acts as a **translator between two incompatible interfaces**.
+
+
+# Adapter Design Pattern Example
+
+### Indian Charger → US Socket (Python)
+
+## Overview
+
+The **Adapter Design Pattern** is a **structural design pattern** that allows two incompatible interfaces to work together.
+
+In this example:
+
+* A **phone expects an Indian charger interface**.
+* But the available power source is a **US socket**.
+* A **converter (adapter)** is used to connect them.
+
+---
+
+# Problem
+
+A **phone expects a charger with a `charge()` method**, but the available **US socket provides `supply_power()`**.
+
+Because the interfaces are different, the phone **cannot directly use the US socket**.
+
+---
+
+# Solution
+
+Create an **Adapter (Converter)** that converts:
+
+```
+charge() → supply_power()
+```
+
+So the phone can charge using the US socket.
+
+---
+
+# Components of Adapter Pattern
+
+| Component | Class           | Description                  |
+| --------- | --------------- | ---------------------------- |
+| Client    | `Phone`         | Uses the charger             |
+| Target    | `IndianCharger` | Interface expected by client |
+| Adapter   | `Converter`     | Converts interface           |
+| Adaptee   | `USSocket`      | Existing incompatible system |
+
+---
+
+# UML Structure
+
+```
+Phone (Client)
+      ↓
+IndianCharger (Target)
+      ↓
+Converter (Adapter)
+      ↓
+USSocket (Adaptee)
+```
+
+---
+
+# Python Implementation
+
+```python
+# Adaptee (Existing system)
+class USSocket:
+
+    def supply_power(self):
+        print("Power supplied from US socket")
+
+
+# Target (Interface expected by client)
+class IndianCharger:
+
+    def charge(self):
+        pass
+
+
+# Adapter
+class Converter(IndianCharger):
+
+    def __init__(self, us_socket):
+        self.us_socket = us_socket
+
+    def charge(self):
+        print("Converter adapting Indian charger to US socket")
+        self.us_socket.supply_power()
+
+
+# Client
+class Phone:
+
+    def __init__(self, charger):
+        self.charger = charger
+
+    def start_charging(self):
+        self.charger.charge()
+
+
+# Main program
+us_socket = USSocket()
+converter = Converter(us_socket)
+phone = Phone(converter)
+
+phone.start_charging()
+```
+
+---
+
+# Output
+
+```
+Converter adapting Indian charger to US socket
+Power supplied from US socket
+```
+
+---
+
+# Flow Explanation
+
+1. The **Phone (Client)** expects a charger with `charge()`.
+2. The **IndianCharger (Target)** defines the expected interface.
+3. The **Converter (Adapter)** implements `charge()`.
+4. The **USSocket (Adaptee)** provides `supply_power()`.
+
+The adapter converts the call:
+
+```
+charge() → supply_power()
+```
+
+---
+
+# Real-World Analogy
+
+```
+Indian Charger
+      ↓
+Converter
+      ↓
+US Socket
+```
+
+Without the **converter**, the charger **cannot fit the US socket**.
+
+---
+
+# Advantages
+
+* Allows integration with **legacy systems**
+* Promotes **code reuse**
+* Follows **Open/Closed Principle**
+
+---
+
+# Interview Definition
+
+> The Adapter Pattern converts the interface of a class into another interface that a client expects, allowing incompatible classes to work together.
