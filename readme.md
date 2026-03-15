@@ -1148,3 +1148,26 @@ Try implementing these design problems:
 * Chat Application
 
 These problems help apply **multiple design patterns together**.
+
+
+
+
+=====================================================================================================================================================
+
+---
+
+
+| Category | Example System |
+|--------|--------|
+| URL Shortener | Bitly |
+| Chat System | WhatsApp |
+| Social Feed | Instagram |
+| Streaming | YouTube |
+| Ride Hailing | Uber |
+| Food Delivery | Zomato |
+| File Storage | Dropbox |
+| Search Engine | Google Search |
+| Notification System | Push Notifications |
+| Booking System | BookMyShow |
+
+---
