@@ -66,7 +66,6 @@ A complete guide for System Design interviews including:
 
 ## 🧠 Interview Cheat Sheet
 
-```text
 Read-heavy  → Redis, Elasticsearch  
 Write-heavy → Cassandra, DynamoDB, Kafka  
 Balanced    → MySQL, PostgreSQL, MongoDB  
