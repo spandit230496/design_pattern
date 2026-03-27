@@ -18,6 +18,59 @@ A complete guide for System Design interviews including:
 
 ---
 
+# 📊 Read-Heavy vs Write-Heavy Databases
+
+## 🔥 Overview
+
+| Category | Database / System | Type | Why Used |
+|----------|------------------|------|----------|
+| Read-heavy | MySQL (with replicas) | SQL | Fast reads with indexing + read replicas |
+| Read-heavy | PostgreSQL | SQL | Strong queries + optimized reads |
+| Read-heavy | Redis | In-memory | Ultra-fast reads (cache) |
+| Read-heavy | Memcached | In-memory | Simple high-speed caching |
+| Read-heavy | Elasticsearch | Search DB | Full-text search, fast querying |
+| Read-heavy | Snowflake | Analytics | Optimized for heavy read queries |
+| Read-heavy | BigQuery | Analytics | Large-scale data analysis |
+
+---
+
+## ✍️ Write-Heavy Systems
+
+| Category | Database / System | Type | Why Used |
+|----------|------------------|------|----------|
+| Write-heavy | Cassandra | NoSQL | High write throughput, distributed |
+| Write-heavy | DynamoDB | NoSQL | Auto-scaling, fast writes |
+| Write-heavy | Kafka | Streaming | Handles millions of writes/sec |
+| Write-heavy | InfluxDB | Time-series | Continuous data ingestion |
+| Write-heavy | HBase | NoSQL | Big data, write-heavy workloads |
+
+---
+
+## ⚖️ Balanced (Read + Write)
+
+| Category | Database / System | Type | Why Used |
+|----------|------------------|------|----------|
+| Balanced | MongoDB | NoSQL | Flexible schema, moderate reads/writes |
+| Balanced | MySQL | SQL | Good for general-purpose apps |
+| Balanced | PostgreSQL | SQL | Strong consistency + performance |
+
+---
+
+## 🚀 Key Takeaways
+
+- **Read-heavy systems** → Use caching (Redis) + read replicas  
+- **Write-heavy systems** → Use distributed DBs (Cassandra, DynamoDB)  
+- **Balanced systems** → Use relational DBs (PostgreSQL, MySQL)  
+
+---
+
+## 🧠 Interview Cheat Sheet
+
+```text
+Read-heavy  → Redis, Elasticsearch  
+Write-heavy → Cassandra, DynamoDB, Kafka  
+Balanced    → MySQL, PostgreSQL, MongoDB  
+
 # 🔥 High-Level Design (HLD)
 
 ---
