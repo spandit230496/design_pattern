@@ -1,4 +1,3 @@
-```md id="api-design-final-clean"
 # 🌐 API Design - Complete Guide
 
 A concise guide covering:
