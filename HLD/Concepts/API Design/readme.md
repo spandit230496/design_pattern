@@ -278,3 +278,25 @@ GET /users?page=1&limit=10
 * SOAP = secure, strict, enterprise
 
 
+
+**GET** — Retrieve data. No request body. Idempotent (calling multiple times gives same result). Example: `GET /users/1`
+
+**POST** — Create a new resource. Has a request body. Not idempotent (calling twice creates two records). Example: `POST /users`
+
+**PUT** — Replace/update an entire resource. Idempotent. You send the full object. Example: `PUT /users/1` with complete user data.
+
+**PATCH** — Partially update a resource. You send only the fields you want to change. Example: `PATCH /users/1` with just `{"email": "new@email.com"}`
+
+**DELETE** — Remove a resource. Idempotent. Example: `DELETE /users/1`
+
+**Key difference between PUT and PATCH:**
+- PUT replaces the whole resource — if you omit a field, it gets nulled out.
+- PATCH only updates the fields you send — rest remain unchanged.
+
+**Quick memory trick:**
+- POST = Create
+- GET = Read
+- PUT/PATCH = Update
+- DELETE = Delete
+
+That's your **CRUD** mapped to HTTP methods. 🎯
