@@ -1,7 +1,3 @@
-Got it 👍 — here’s a **clean GitHub README.md** for **Caching (with Mermaid diagrams)** that you can directly paste.
-
----
-
 # 🚀 Caching - Complete Backend Guide
 
 ## 📌 What is Caching?
