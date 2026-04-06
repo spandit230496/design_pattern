@@ -1,7 +1,3 @@
-Perfect — this is a **complete Java + backend concurrency interview bundle**. I’ll explain each topic **deeply but cleanly**, with **when to use + real-world intuition**.
-
----
-
 # 🔴 1. Race Condition
 
 ## 🧠 Definition
