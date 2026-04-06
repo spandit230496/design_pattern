@@ -388,4 +388,4 @@ graph TD
 * Mention **eventual consistency**
 * Talk about **trade-offs**
 * Show **decision-making**
-
+----------------------------------------
