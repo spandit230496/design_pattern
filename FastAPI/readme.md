@@ -1,6 +1,7 @@
 
 
-📌 Basics
+# Basics
+
 - FastAPI installation & setup
 - Creating first API (FastAPI())
 - Path parameters
@@ -9,31 +10,31 @@
 - Response models
 - Status codes
 
-📌 Core Concepts
+# Core Concepts
 - Dependency Injection (Depends)
 - Async vs Sync (async def)
 - Validation (Pydantic models)
 - Error handling (HTTPException)
 
-📌 Request Handling
+# Request Handling
 - Headers
 - Cookies
 - Forms & file uploads
 - Background tasks
 
-📌 Database
+# Database
 - SQLAlchemy ORM
 - DB session management
 - CRUD operations
 - Alembic migrations
 
-📌 Authentication & Security
+# Authentication & Security
 - OAuth2
 - JWT authentication
 - Password hashing (bcrypt)
 - Role-based access control
 
-📌 Advanced
+# Advanced
 - Middleware
 - CORS handling
 - WebSockets
@@ -41,24 +42,24 @@
 - Rate limiting
 - Logging
 
-📌 Project Structure
+# Project Structure
 - Routers
 - Schemas
 - Models
 - Services layer
 - Config management
 
-📌 Deployment
+# Deployment
 - Uvicorn / Gunicorn
 - Docker
 - Nginx
 - Environment variables
 
-📌 Testing
+# Testing
 - Pytest
 - TestClient
 
-📌 Documentation
+# Documentation
 - Swagger (/docs)
 - ReDoc (/redoc)
 
